@@ -1,5 +1,136 @@
 @import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&family=Inter:wght@400;700&family=Lexend+Deca&display=swap");
+:root {
+  font-size: 13px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
 body {
   background-color: #ecf2f8;
   font-family: "Barlow Semi Condensed", sans-serif;
+}
+
+.wrapper {
+  display: grid;
+  grid-row-gap: 30px;
+  margin: auto;
+}
+
+.card {
+  border-radius: 10px;
+  padding: 35px 35px;
+  color: #cfcfcf;
+  box-shadow: 10px 10px 10px #5e6c78;
+}
+.card:nth-child(1) {
+  background-color: #7541c8;
+}
+.card:nth-child(2) {
+  background-color: #48556a;
+}
+.card:nth-child(3) {
+  background-color: white;
+  color: #48556a;
+}
+.card:nth-child(4) {
+  background-color: #19212e;
+}
+.card:nth-child(5) {
+  background-color: white;
+  color: #48556a;
+}
+.card__image {
+  border: 2px solid transparent;
+  border-radius: 50%;
+  width: 30px;
+  box-sizing: content-box;
+  float: left;
+}
+.card__name {
+  margin-left: 16px;
+  margin-bottom: 16px;
+  float: left;
+}
+.card__name > p:nth-child(2) {
+  opacity: 50%;
+}
+.card__des-1 {
+  clear: left;
+  font-size: 18px;
+  color: white;
+  margin-bottom: 20px;
+}
+.card__des-2 {
+  opacity: 70%;
+}
+
+.card-1 > .card__image,
+.card-4 > .card__image {
+  border-color: #9663e9;
+}
+
+.card-3 > .card__des-1,
+.card-5 > .card__des-1 {
+  color: #48556a;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: #7541c8;
+  text-decoration: none;
+}
+.attribution a:hover {
+  color: #9663e9;
+}
+
+@media screen and (min-width: 767px) {
+  .wrapper {
+    width: 700px;
+  }
+
+  .card:nth-child(1) {
+    background-position: 320px 0;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .wrapper {
+    margin-top: 40px;
+    margin-bottom: 80px;
+    grid-row-gap: 30px;
+    grid-column-gap: 30px;
+    grid-template-columns: auto auto auto auto auto;
+    width: 1100px;
+  }
+
+  .card:nth-child(1) {
+    background-position: 320px 0;
+  }
+
+  .card-1 {
+    grid-column: 1/span 3;
+  }
+
+  .card-2 {
+    grid-column: 4/span 1;
+  }
+
+  .card-3 {
+    grid-column: 1/span 1;
+  }
+
+  .card-4 {
+    grid-column: 2/span 3;
+  }
+
+  .card-5 {
+    grid-column: 5/span 1;
+    grid-row: 1/span 2;
+  }
 }/*# sourceMappingURL=style.css.map */
